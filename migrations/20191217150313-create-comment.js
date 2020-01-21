@@ -9,7 +9,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       article_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references : {
+          model: 'articles',
+          key:'id'
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       },
       comment: {
         type: Sequelize.STRING

@@ -2,52 +2,49 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-      return queryInterface.bulkInsert('categories', [{
-        id: 1,
-        name: "HOME"
-      },
+      return queryInterface.bulkInsert('categories', [
       {
-        id: 2,
+        id: 1,
         name: "ONEZERO"
       },
         {
-          id: 3,
+          id: 2,
           name: "ELEMENTAL"
         }, 
         {
-          id: 4,
+          id: 3,
           name: "GEN"
         },
         {
-          id: 5,
+          id: 4,
           name: "ZORA"
         },
         {
-          id: 6,
+          id: 5,
           name: "FORGE"
         },
         {
-          id: 7,
+          id: 6,
           name: "HUMAN PARTS"
         },
         {
-          id: 8,
+          id: 7,
           name: "MARKER"
         },
         {
-          id: 9,
+          id: 8,
           name: "LEVEL"
         },
         {
-          id: 10,
+          id: 9,
           name: "HEATED"
         },
         {
-          id: 11,
+          id: 10,
           name: "MODELLING"
         },
         {
-          id: 12,
+          id: 11,
           name: "MORE"
         }
     ], {});

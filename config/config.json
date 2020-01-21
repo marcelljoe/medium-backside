@@ -15,6 +15,7 @@
     "dialect": "mysql",
     "operatorsAliases": false
   },
+  
   "production": {
     "username": "root",
     "password": null,

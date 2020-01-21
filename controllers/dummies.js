@@ -1,4 +1,4 @@
-const connection = require('../db')
+const connection = require("../db");
 const dummies = [
   {
     id: 1,
@@ -11,17 +11,20 @@ const dummies = [
 ];
 
 exports.index = (req, res) => {
-    connection.query('select * from dummies', (err, rows) => {
-        if (err) throw err 
-        res.send(rows);
-    })
-};
-
-exports.show = (req, res) => {
-  connection.query(`select * from dummies where id=${req.params.id}`, (err, rows) => {
+  connection.query("select * from dummies", (err, rows) => {
     if (err) throw err;
     res.send(rows);
   });
+};
+
+exports.show = (req, res) => {
+  connection.query(
+    `select * from dummies where id=${req.params.id}`,
+    (err, rows) => {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
 };
 
 exports.store = (req, res) => {
